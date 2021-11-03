@@ -1,0 +1,35 @@
+.CreateContact {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(118,228,100);
+  background: linear-gradient(326deg, rgba(118,228,100,1) 0%, rgba(141,141,231,1) 50%, rgba(71,205,232,1) 100%);
+}
+
+.CreateContact > div {
+  min-width: 600px;
+  padding: 0 20px;
+}
+
+.CreateContact form {
+  /* background: #eee; */
+  background: linear-gradient(326deg, rgba(118,228,100,1) 0%, rgba(141,141,231,1) 50%, rgba(71,205,232,1) 100%);
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.CreateContact input {
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.CreateContact h1 {
+  color: whitesmoke;
+}
