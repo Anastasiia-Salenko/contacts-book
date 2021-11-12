@@ -1,0 +1,11 @@
+.ItemContact {
+  list-style: none;
+  padding: 20px;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
