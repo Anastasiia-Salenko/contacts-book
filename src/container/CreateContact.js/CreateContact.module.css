@@ -15,7 +15,6 @@
 }
 
 .CreateContact form {
-  /* background: #eee; */
   background: linear-gradient(326deg, rgba(118,228,100,1) 0%, rgba(141,141,231,1) 50%, rgba(71,205,232,1) 100%);
   border-radius: 5px;
   padding: 15px;
@@ -30,6 +29,9 @@
   margin-right: 20px;
 }
 
-.CreateContact h1 {
+.header h1{
+  display: flex;
   color: whitesmoke;
+  align-items: center;
+  justify-content: center;
 }
