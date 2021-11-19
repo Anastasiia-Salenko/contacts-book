@@ -38,3 +38,8 @@
   color: whitesmoke;
   text-align: center;
 }
+
+.error {
+  color: #D00036;
+  margin: -18px 0 10px 4px;
+}
