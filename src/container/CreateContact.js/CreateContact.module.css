@@ -14,7 +14,9 @@
   padding: 0 20px;
 }
 
-.CreateContact form {
+.form {
+  width: 100px;
+  color: whitesmoke;
   background: linear-gradient(326deg, rgba(118,228,100,1) 0%, rgba(141,141,231,1) 50%, rgba(71,205,232,1) 100%);
   border-radius: 5px;
   padding: 15px;
