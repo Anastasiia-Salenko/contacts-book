@@ -86,6 +86,10 @@ const CreateContact = (props) => {
               name="bDay"
               type="text"
             />
+
+            <Button className={classes.buttonAdd} type="primary">
+              Add contact
+            </Button>
           </Form>
         </Formik>
       </div>
