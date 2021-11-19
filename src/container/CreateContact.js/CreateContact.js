@@ -4,6 +4,7 @@ import { Formik, Form, useField } from "formik";
 import * as Yup from 'yup';
 import classes from './CreateContact.module.css';
 import Button from '../../components/UI/Button/Button'
+import moment from "moment";
 
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -43,14 +44,19 @@ const CreateContact = (props) => {
           }}
           validationSchema={Yup.object({
             firstName: Yup.string()
-              .required("Required"),
+              .required("Required")
+              .max(255, "Max length should be 255 characters"),
             lastName: Yup.string()
-              .required("Required"),
-            phone: Yup.number()
-              .required("Required"),
+              .required("Required")
+              .max(255, "Max length should be 255 characters"), 
+            phone: Yup.string()
+              .required("Required")
+              .matches(/^\+380\d{9}$/, 'The phone format should be +380XXXXXXXXX'),
             email: Yup.string()
               .email("Invalid email address"),
             bDay: Yup.date()
+              .transform((__, value) => moment(value, 'DD.MM.YYYY', true).toDate())
+              .typeError('Invalid date'),
           })}
           onSubmit={values => {
             alert(JSON.stringify(values, null, 2))
@@ -61,30 +67,35 @@ const CreateContact = (props) => {
               label="First Name"
               name="firstName"
               type="text"
+              placeholder="Elon"
             />
 
             <MyTextInput
               label="Last Name"
               name="lastName"
               type="text"
+              placeholder="Musk"
             />
 
             <MyTextInput
               label="Phone"
               name="phone"
               type="text"
+              placeholder="+380XXXXXXXXX"
             />
 
             <MyTextInput
               label="Email Address"
               name="email"
               type="email"
+              placeholder="elon@spacex.com"
             />
 
             <MyTextInput
               label="Birthday"
               name="bDay"
               type="text"
+              placeholder="dd.mm.yyyy"
             />
 
             <Button className={classes.buttonAdd} type="primary">
